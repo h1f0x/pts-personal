@@ -57,6 +57,7 @@
         published_ports:
           - '{{ports.stdout}}{{extport}}:{{intport}}'
           - '5353:5353/tcp'
+          - '5353:5353/udp'
         volumes: '{{pg_volumes}}'
         env: '{{pg_env}}'
         restart_policy: unless-stopped
