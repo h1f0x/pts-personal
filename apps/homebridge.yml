@@ -38,7 +38,7 @@
     - name: 'Setting {{pgrole}} Volumes'
       set_fact:
         pg_volumes:
-          - '/opt/appdata/{{pgrole}}:/var/lib/homebridge'
+          - '/opt/appdata/{{pgrole}}:/homebridge'
           - '{{path.stdout}}:{{path.stdout}}'
           - '/etc/localtime:/etc/localtime:ro'
 
@@ -58,6 +58,8 @@
           - '{{ports.stdout}}{{extport}}:{{intport}}'
           - '5353:5353/tcp'
           - '5353:5353/udp'
+          - '51737:51737/tcp'
+          - '51737:51737/udp'
         volumes: '{{pg_volumes}}'
         env: '{{pg_env}}'
         restart_policy: unless-stopped
