@@ -56,8 +56,6 @@
         pull: yes
         published_ports:
           - '{{ports.stdout}}{{extport}}:{{intport}}'
-          - '5353:5353/tcp'
-          - '5353:5353/udp'
           - '51737:51737/tcp'
           - '51737:51737/udp'
         volumes: '{{pg_volumes}}'
