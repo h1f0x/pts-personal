@@ -58,6 +58,9 @@
           - '{{ports.stdout}}{{extport}}:{{intport}}'
           - '51737:51737/tcp'
           - '51737:51737/udp'
+          - '51738:51738/tcp'
+          - '51737:51737/udp'
+          - '48000:48000/tcp'
         volumes: '{{pg_volumes}}'
         env: '{{pg_env}}'
         restart_policy: unless-stopped
