@@ -69,8 +69,3 @@
               - '{{pgrole}}'
         state: started
         labels: '{{pg_labels}}'
-        logging:
-          driver: json-file
-          options:
-            max-size: '10mb'
-            max-file: '1'
